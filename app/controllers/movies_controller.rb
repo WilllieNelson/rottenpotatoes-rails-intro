@@ -12,16 +12,26 @@ class MoviesController < ApplicationController
 
   def index
     @title_class, @release_date_class = ""
-    @column = params[:sort]
+    @all_ratings = Movie.all_ratings;
+    
 
-    case @column
+    if params[:ratings].present?
+      @selected_ratings = params[:ratings]
+    else
+      @selected_ratings = Hash.new(false)
+      @all_ratings.each do |rating|
+        @selected_ratings[rating] = true
+    end
+  end
+    case params[:sort]
+
     when "title"
       @title_class = "hilite"
     when "release_date"
       @release_date_class = "hilite"
     end
      
-      @movies = Movie.order(@column)
+    @movies = Movie.where(:rating => @selected_ratings.keys).order(params[:sort])  
   end
 
   def new
