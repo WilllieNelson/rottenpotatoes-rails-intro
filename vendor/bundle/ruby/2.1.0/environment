@@ -1,0 +1,3 @@
+export PATH="/home/sean/.rvm/gems/ruby-2.2.2/bin:/home/sean/.rvm/gems/ruby-2.2.2@global/bin:/home/sean/.rvm/rubies/ruby-2.2.2/bin:/home/sean/.rvm/bin:$PATH"
+export GEM_PATH="/home/sean/.rvm/gems/ruby-2.2.2:/home/sean/.rvm/gems/ruby-2.2.2@global:/home/sean/Dev homework/hw-rails-intro-master/rottenpotatoes-rails-intro/vendor/bundle/ruby/2.1.0"
+export GEM_HOME="/home/sean/Dev homework/hw-rails-intro-master/rottenpotatoes-rails-intro/vendor/bundle/ruby/2.1.0"
